@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--Import Google Icon Font-->
+  <title>Sistema Bat</title>
+  <meta charset="utf-8">
+  <!--Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-  <title>Sistema Bat</title>
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta charset="utf-8">
   <link href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet" id="bootstrap-css">
+  <!-- mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" href="img/logo.png" />
+
 </head>
 <body>
   <nav class="indigo lighten-1" role="navigation">
