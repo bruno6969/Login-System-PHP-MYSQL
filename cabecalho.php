@@ -15,11 +15,12 @@
 </head>
 <body>
   <nav class="indigo lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img class="img" style="width: 120px;" src="img/logo.png" /></a>
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Bat Login</a><img class="img" style="width: 100px; margin-left: -100px;" src="img/logo.png" />
       <ul class="right hide-on-med-and-down">
         <li><a href="index.php">Home</a></li>
       </ul>
-       <ul id="nav-mobile" class="sidenav">
+      <ul id="nav-mobile" class="sidenav">
         <li><a href="index.php">Home</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">

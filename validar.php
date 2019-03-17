@@ -1,4 +1,5 @@
 <?php
+include 'conexao.php';
 
   // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
 if (!empty($_POST) AND (empty($_POST['username']) OR empty($_POST['password']))) {
@@ -7,12 +8,6 @@ if (!empty($_POST) AND (empty($_POST['username']) OR empty($_POST['password'])))
   $user = $_POST['username'];
   $pass = sha1($_POST['password']);
 }
-
-  // Tenta se conectar ao servidor MySQL
-$conn = mysqli_connect('localhost', 'admin', 'password');
-
-  // Tenta se conectar a um banco de dados MySQL
-$banco = mysqli_select_db($conn,'sistema');
 
 
   // Validação do usuário/senha digitados

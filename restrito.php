@@ -20,78 +20,21 @@ if (!isset($_SESSION['UsuarioID'])) {
 	<h5 class="indigo-text">Página restrita - Nível 1</h5>
 	<h6 class="blue-grey-text">Usuário: <?php echo $_SESSION['UsuarioNome']; ?></h6>
 </div>
-
 <!--card stats start-->
-<div id="card-stats">
-	<div class="row">
-		<div class="col s12 m6 l3">
-			<div class="card">
-				<div class="card-content  green white-text">
-					<p class="card-stats-title"><i class="mdi-social-group-add"></i> Clientes Novos</p>
-					<h4 class="card-stats-number">566</h4>
-					<p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">de ontem</span>
-					</p>
-				</div>
-				<div class="card-action  green darken-2">
-					<div id="clients-bar"></div>
-				</div>
-			</div>
-		</div>
-		<div class="col s12 m6 l3">
-			<div class="card">
-				<div class="card-content purple white-text">
-					<p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Vendas do mês</p>
-					<h4 class="card-stats-number">$8990.63</h4>
-					<p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">do último mês</span>
-					</p>
-				</div>
-				<div class="card-action purple darken-2">
-					<div id="sales-compositebar"></div>
-
-				</div>
-			</div>
-		</div>                            
-		<div class="col s12 m6 l3">
-			<div class="card">
-				<div class="card-content blue-grey white-text">
-					<p class="card-stats-title"><i class="mdi-action-trending-up"></i> Lucro de Hoje</p>
-					<h4 class="card-stats-number">$536.52</h4>
-					<p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 80% <span class="blue-grey-text text-lighten-5">de ontem</span>
-					</p>
-				</div>
-				<div class="card-action blue-grey darken-2">
-					<div id="profit-tristate"></div>
-				</div>
-			</div>
-		</div>
-		<div class="col s12 m6 l3">
-			<div class="card">
-				<div class="card-content pink lighten-2 white-text">
-					<p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> Faturas</p>
-					<h4 class="card-stats-number">1806</h4>
-					<p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">do último mês</span>
-					</p>
-				</div>
-				<div class="card-action  pink darken-2">
-					<div id="invoice-line"></div>
-				</div>
+<center>
+	<div id="card-stats">
+		<div class="row">
+			<div class="col s12 m6 l3">
+				<p><a class="btn waves-effect waves-light teal" href="alterarsenha.php">Alterar senha</a></p>
 			</div>
 		</div>
 	</div>
-</div>
+</center>
 <!--card stats end-->
 <!-- START FOOTER -->
-<br/ >
-<br/ >
-<br/ >
-<br/ >
-<br/ >
-<br/ >
-<br/ >
-<br/ >
-<br/ >
-<br/ >
-<!-- END FOOTER -->
 
+<?php for ($i=0; $i < 20; $i++) { echo "<br/ >";}?>
+
+<!-- END FOOTER -->
 
 <?php include 'rodape.php';?>

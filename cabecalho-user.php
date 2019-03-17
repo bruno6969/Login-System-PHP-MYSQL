@@ -21,9 +21,6 @@
       <ul id="nav-mobile" class="sidenav">
         <li><a href="index.php">Sair</a></li>
       </ul>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#"><i class="material-icons">search</i></a></li>
-      </ul>
       <a href="index.php" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
