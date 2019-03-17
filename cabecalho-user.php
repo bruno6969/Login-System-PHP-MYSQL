@@ -17,10 +17,10 @@
   <nav class="indigo lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img class="img" style="width: 120px;" src="img/logo.png" /></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php">Sair</a></li>
       </ul>
        <ul id="nav-mobile" class="sidenav">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php">Sair</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
         <li><a href="#"><i class="material-icons">search</i></a></li>
