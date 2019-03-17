@@ -16,8 +16,10 @@ if (!isset($_SESSION['UsuarioID'])) {
 }
 
 ?>
-<h5 class="indigo-text">Página restrita - Nível 1</h5>
-<p>Olá, <?php echo $_SESSION['UsuarioNome']; ?>!</p>
+<div class="col" style="margin: 20px;">
+	<h5 class="indigo-text">Página restrita - Nível 1</h5>
+	<h6 class="blue-grey-text">Usuário: <?php echo $_SESSION['UsuarioNome']; ?></h6>
+</div>
 
 <!--card stats start-->
 <div id="card-stats">
@@ -75,10 +77,21 @@ if (!isset($_SESSION['UsuarioID'])) {
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 <!--card stats end-->
+<!-- START FOOTER -->
+<br/ >
+<br/ >
+<br/ >
+<br/ >
+<br/ >
+<br/ >
+<br/ >
+<br/ >
+<br/ >
+<br/ >
+<!-- END FOOTER -->
 
 
 <?php include 'rodape.php';?>

@@ -11,7 +11,6 @@
   <!-- mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" href="img/logo.png" />
-
 </head>
 <body>
   <nav class="indigo lighten-1" role="navigation">
@@ -19,7 +18,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="index.php">Sair</a></li>
       </ul>
-       <ul id="nav-mobile" class="sidenav">
+      <ul id="nav-mobile" class="sidenav">
         <li><a href="index.php">Sair</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
@@ -28,3 +27,4 @@
       <a href="index.php" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+ 
