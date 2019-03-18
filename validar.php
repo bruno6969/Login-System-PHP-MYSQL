@@ -36,6 +36,8 @@ if (mysqli_num_rows($query) != 1) {
     header("Location: restrito.php"); exit;
   } elseif ($resultado['nivel'] == 2) {
     header("Location: admin.php"); exit;
+  } elseif ($resultado['nivel'] == 0) {
+    header("Location: supervisor.php"); exit;
   }
 }
 
