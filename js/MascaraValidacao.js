@@ -37,11 +37,17 @@ function applyDataMask(field) {
     field.addEventListener('click', changed)
     field.addEventListener('keyup', changed)
 }
-function ShowCPF()
-{
-	document.getElementById("cpf").disabled = false;
+
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Senhas diferentes!");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
 }
-function showCNPJ()
-{
-	document.getElementById("cnpj").disabled = false;
-}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
