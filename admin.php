@@ -1,8 +1,17 @@
 <?php
-  session_start();
-  include "cabecalho-user.php";
   // A sessão precisa ser iniciada em cada página diferente
-  if (!isset($_SESSION)) session_start(); ?>
+  if (!isset($_SESSION)) session_start();
+  
+   // Verifica se não há a variável da sessão que identifica o usuário
+  if (!isset($_SESSION['UsuarioId'])) {
+       // Destrói a sessão por segurança
+   session_destroy();
+       // Redireciona o visitante de volta pro login
+   header("Location: index.php"); exit;
+  }
+  include "cabecalho-user.php";
+  include "/conn/validar.php";
+  ?>
 <title>Página Restrita - ADMIN</title>
 <div class="col" style="margin: 20px;">
   <h5 class="indigo-text">Página restrita - Administradores</h5>
@@ -123,27 +132,47 @@
         </div>
       </li>
       <li>
-        <div class="collapsible-header btn waves-effect waves-light teal" style="padding: 10px;">Editar</div>
-        <div class="collapsible-body">
-          <<<
-          <CONTEUDO>
-          >>>
-        </div>
-      </li>
-      <li>
         <div class="collapsible-header btn waves-effect waves-light teal" style="padding: 10px;">Listar</div>
         <div class="collapsible-body">
-          <<<
-          <CONTEUDO>
-          >>>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header btn waves-effect waves-light teal" style="padding: 10px;">Excluir</div>
-        <div class="collapsible-body">
-          <<<
-          <CONTEUDO>
-          >>>
+          <?php
+            include('conn/conexao.php');
+            
+            $consulta = "SELECT * FROM `sologin`.`USUARIOS`;";
+            $query_co = mysqli_query($conn, $consulta);
+            
+            ?>
+          <div class="card-panel">
+            <h4 class="header2">Lista de usuários</h4>
+            <div class="row">
+              <table class="responsive-table">
+                <thead>
+                  <tr style=" background-color: rgba(111,111,111,0.3);">
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>CPF</th>
+                    <th>CNPJ</th>
+                    <th>Data cadastro</th>
+                    <th>Ação</th>
+                  </tr>
+                </thead>
+                <?php while($dado = mysqli_fetch_array($query_co)) { ?>
+                <tr>
+                  <td><?php echo $dado['ID']; ?></td>
+                  <td><?php echo $dado['NOME']; ?></td>
+                  <td><?php echo $dado['EMAIL']; ?></td>
+                  <td><?php echo $dado['CPF']; ?></td>
+                  <td><?php echo $dado['CNPJ']; ?></td>
+                  <td><?php echo date('d/m/Y', strtotime($dado['DATA_CADASTRO'])); ?></td>
+                  <td>
+                    <a href="editar.php?codigo=<?php echo $dado['ID']; ?>">Editar</a>
+                    <a href="deletar.php?codigo=<?php echo $dado['ID']; ?>">Excluir</a>
+                  </td>
+                </tr>
+                <?php } ?>
+              </table>
+            </div>
+          </div>
         </div>
       </li>
     </ul>

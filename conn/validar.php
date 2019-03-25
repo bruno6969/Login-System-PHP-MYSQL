@@ -45,6 +45,7 @@ if (mysqli_num_rows($query) != 1) {
     $_SESSION['UsuarioRua']        = $resultado['ENDERECO_RUA'];
     $_SESSION['UsuarioNum']        = $resultado['ENDERECO_NUM'];
     $_SESSION['UsuarioCEP']        = $resultado['ENDERECO_CEP'];
+    $_SESSION['UsuarioComp']        = $resultado['ENDERECO_COMPLEMENTO'];
     $_SESSION['UsuarioNasci']      = $resultado['DATA_NASCIMENTO'];
     
     // Redireciona o visitante

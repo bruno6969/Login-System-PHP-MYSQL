@@ -16,6 +16,9 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="logout.php">Sair</a></li>
         </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="admin_config.php">Configurações</a></li>
+        </ul>
         <ul id="nav-mobile" class="sidenav">
           <li><a href="logout.php">Sair</a></li>
         </ul>
