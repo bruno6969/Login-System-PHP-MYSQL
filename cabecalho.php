@@ -3,7 +3,7 @@
   <head>
     <title>SoLogin</title>
     <meta charset="utf-8">
-    <!--Google Icon Font-->
+    <!--Google Icons Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Importar Materilize CSS-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
