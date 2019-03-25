@@ -1,8 +1,8 @@
-<footer class="page-footer indigo" style="margin-bottom: 0;">
+<footer class="page-footer indigo" style="margin-bottom: 0; margin-top: 25px;">
   <div class="footer-copyright">
   <div class="container">
-    Copyright 2019 &copy <a class="indigo-text text-lighten-3" href="https://github.com/MartinsMessias">Messias Martins | William Assís
-  </div>
+    Copyright 2019 &copy <a class="indigo-text text-lighten-3" href="https://github.com/MartinsMessias">Messias Martins | William do Santos
+  </div> 
 </footer>
 <!--  Scripts-->
 <script src="js/jquery.min.js"></script>

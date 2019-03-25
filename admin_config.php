@@ -30,7 +30,7 @@ include "/conn/validar.php";
           <li><a href="logout.php">Sair</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-          <li><a href="admin.php">Voltar</a></li>
+          <li><a href="<?php if ($_SESSION['UsuarioNivel'] == 1) {echo 'supervisor.php';} elseif ($_SESSION['UsuarioNivel'] == 2) {echo 'admin.php';} elseif ($_SESSION['UsuarioNivel'] == 0) {echo 'cliente.php';}?>">Voltar</a></li>
         </ul>
         <ul id="nav-mobile" class="sidenav">
           <li><a href="logout.php">Sair</a></li>
@@ -165,16 +165,5 @@ if (!empty($_POST)) {
     
     $query = mysqli_query($conn, $inserir);
     echo "<script language='javascript' type='text/javascript'>alert('Dados alterados com sucesso! Entre com a nova senha!'); window.location.href='logout.php';</script>";
-
-      if ($_SESSION['UsuarioNivel'] == 1) {
-        header("Location: ../supervisor.php");
-        exit;
-    } elseif ($_SESSION['UsuarioNivel'] == 2) {
-        header("Location: ../admin.php");
-        exit;
-    } elseif ($_SESSION['UsuarioNivel'] == 0) {
-        header("Location: ../cliente.php");
-        exit;
-    }
 }
 ?>

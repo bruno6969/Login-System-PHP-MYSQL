@@ -1,7 +1,4 @@
-<?php 
-  session_start();
-  include 'cabecalho.php';
-?>
+<?php session_start(); include 'cabecalho.php';?>
 <main style="padding: 22px;">
   <center>
     <h5 class="indigo-text">Faça o login na sua conta</h5>
@@ -20,15 +17,10 @@
               <label for='password'>Digite sua senha</label>
             </div>
             <label style='float: right;'>
-            <a class='pink-text' href='#!'><b>Esqueci a senha</b></a>
+            <a class='pink-text' href='recupera.php'><b>Esqueci a senha</b></a>
             </label>
           </div>
-          <?php 
-            if(isset($_SESSION["invalido"])){
-                $dados_invalidos = $_SESSION["invalido"];
-                echo "<p class='red-text'><b>Usuário e/ou senha inválidos!</b></p>";
-              }
-            ?>
+          <?php if(isset($_SESSION["invalido"])){$dados_invalidos = $_SESSION["invalido"]; echo "<p class='red-text'><b>Usuário e/ou senha inválidos!</b></p>";}?>
           <br />
           <center>
             <div class='row'>
@@ -38,7 +30,6 @@
         </form>
       </div>
     </div>
-    <a href="#!">Ainda não sou cadastrado</a>
   </center>
 </main>
 <?php include 'rodape.php';?>

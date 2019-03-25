@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 25/03/2019 às 02:35
--- Versão do servidor: 10.1.37-MariaDB-0+deb9u1
--- Versão do PHP: 7.0.33-5+0~20190309015553.9+stretch~1.gbp4c6517
+-- Generation Time: Mar 25, 2019 at 10:07 AM
+-- Server version: 10.1.37-MariaDB-0+deb9u1
+-- PHP Version: 7.0.33-5+0~20190309015553.9+stretch~1.gbp4c6517
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `sologin`
+-- Database: `sologin`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `USUARIOS`
+-- Table structure for table `USUARIOS`
 --
 
 CREATE TABLE `USUARIOS` (
@@ -47,11 +47,18 @@ CREATE TABLE `USUARIOS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Índices de tabelas apagadas
+-- Dumping data for table `USUARIOS`
+--
+
+INSERT INTO `USUARIOS` (`ID`, `NIVEL`, `NOME`, `EMAIL`, `TELEFONE`, `TIPO_PESSOA`, `CPF`, `CNPJ`, `ENDERECO_RUA`, `ENDERECO_NUM`, `ENDERECO_CEP`, `ENDERECO_COMPLEMENTO`, `USUARIO`, `SENHA`, `DATA_NASCIMENTO`, `DATA_CADASTRO`, `CADASTRO_ATIVO`) VALUES
+(1, 2, 'Chico Cunha', 'hira@gmail.com', '(91) 35554-444', 'F', '01891189090', NULL, 'Rodovia BR-364, 1409', 1409, '1233', '', 'chico', 'ef05cc581f55f418cb863ca62246edc07a4fc141', '1996-04-04', '2019-03-25', 1);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `USUARIOS`
+-- Indexes for table `USUARIOS`
 --
 ALTER TABLE `USUARIOS`
   ADD PRIMARY KEY (`ID`),
@@ -59,14 +66,14 @@ ALTER TABLE `USUARIOS`
   ADD KEY `NIVEL` (`NIVEL`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `USUARIOS`
+-- AUTO_INCREMENT for table `USUARIOS`
 --
 ALTER TABLE `USUARIOS`
-  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

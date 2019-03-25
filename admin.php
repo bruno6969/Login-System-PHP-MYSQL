@@ -17,9 +17,9 @@
   <h5 class="indigo-text">Página restrita - Administradores</h5>
   <h6 class="blue-grey-text">Logado como <?php echo $_SESSION['UsuarioNome']; ?></h6>
 </div>
-<div id="card-stats" style="margin-bottom: 180px;">
-  <div class="row" style="margin: 50px;">
-    <ul class="collapsible col s12" style="padding: 20px;">
+<div id="card-stats" style="margin-bottom: 300px;">
+  <div class="row" style="margin: 5px;">
+    <ul class="collapsible col s12" style="padding: 2px;">
       <li>
         <div class="collapsible-header btn waves-effect waves-light teal" style="padding: 10px;">Cadastrar</div>
         <div class="collapsible-body" style="padding: 0;">
@@ -59,7 +59,7 @@
                       <div class="collapsible-header blue-text">Pessoa Física</div>
                       <div class="collapsible-body">
                         <div class="input-field">
-                          <input id="cpf" type="text" name="cpf" class="form-controll">
+                          <input id="cpf" type="text" name="cpf" class="form-controll" onkeyup="TestaCPF(this);">
                           <label for="cpf">CPF</label>
                         </div>
                       </div>
@@ -69,7 +69,7 @@
                       <div class="collapsible-header green-text">Pessoa Juridica</div>
                       <div class="collapsible-body">
                         <div class="input-field">
-                          <input id="cnpj" type="text" name="cnpj" class="form-controll"> 
+                          <input id="cnpj" type="text" name="cnpj" class="form-controll" onkeyup="validarCNPJ(this);"> 
                           <label for="cnpj">CNPJ</label>
                         </div>
                       </div>
@@ -153,6 +153,7 @@
                     <th>CPF</th>
                     <th>CNPJ</th>
                     <th>Data cadastro</th>
+                    <th>Usuário</th>
                     <th>Ação</th>
                   </tr>
                 </thead>
@@ -164,6 +165,7 @@
                   <td><?php echo $dado['CPF']; ?></td>
                   <td><?php echo $dado['CNPJ']; ?></td>
                   <td><?php echo date('d/m/Y', strtotime($dado['DATA_CADASTRO'])); ?></td>
+                  <td><?php echo $dado['USUARIO']; ?></td>
                   <td>
                     <a href="editar.php?codigo=<?php echo $dado['ID']; ?>">Editar</a>
                     <a href="deletar.php?codigo=<?php echo $dado['ID']; ?>">Excluir</a>

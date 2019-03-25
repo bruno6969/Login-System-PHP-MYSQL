@@ -14,7 +14,7 @@
   <body>
     <nav class="indigo lighten-1" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">SOLOGIN</a>
+        <a id="logo-container" href="index.php" class="brand-logo">SOLOGIN</a>
         <a href="index.php" data-target="nav-mobile" class="sidenav-trigger">
         <i class="material-icons">menu</i>
         </a>
