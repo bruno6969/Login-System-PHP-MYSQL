@@ -1,7 +1,7 @@
 <footer class="page-footer indigo" style="margin-bottom: 0;">
   <div class="footer-copyright">
   <div class="container">
-    Copyright 2019 &copy <a class="indigo-text text-lighten-3" href="https://github.com/MartinsMessias">Messias Martins
+    Copyright 2019 &copy <a class="indigo-text text-lighten-3" href="https://github.com/MartinsMessias">Messias Martins | William Assís
   </div>
 </footer>
 <!--  Scripts-->
